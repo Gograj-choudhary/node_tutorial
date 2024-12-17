@@ -28,3 +28,4 @@ mongoose.connection.on('connected', () => {
         console.log('Server is running on port 3000');
     });
 });
+// this is server.js file
