@@ -8,11 +8,14 @@ require('dotenv').config();
 const mongoURL = process.env.MONGODB_URL;
 
 
-// Connect to MongoDB
-mongoose.connect(mongoURL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+// Connect to MongoDB when you  use locally
+// mongoose.connect(mongoURL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
+
+// Connect to MongoDB When you use render
+mongoose.connect(mongoURL);
 
 // Get the default connection
 const db = mongoose.connection;
